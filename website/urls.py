@@ -10,6 +10,8 @@ urlpatterns = [
     path('excluirCurso/<codigo>', views.excluirCurso),
     path('cadastro/', views.cadastro, name='cadastro'),
     path('login/', views.login, name='login'),
+    path('plusFaltas/<codigo>', views.plusFaltas),
+    path('menosFaltas/<codigo>', views.menosFaltas),
     
     
 ] 
