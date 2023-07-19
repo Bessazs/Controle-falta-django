@@ -24,7 +24,6 @@ def registrarCurso(request):
             codigo = random.random()
         else:
             break
-        
     
             
             

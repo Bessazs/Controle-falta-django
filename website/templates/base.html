@@ -9,28 +9,24 @@
         <link rel="stylesheet" href="{% static  'css/Controle.css'%}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">Controle de Faltas</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdsown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Ação</a>
-                <a class="dropdown-item" href="#">Outra ação</a>
-                <a class="dropdown-item" href="#">Algo mais aqui</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary ">
+    <a class="navbar-brand" href="#">Controle de faltas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}"">Home <span class="sr-only">(current)</span></a>
+        </li>  
+      </ul>
+      <div id="user-tools">
+            
+        Bem-vindo(a),
+        <strong>{{ user.get_username }}</strong>.
+    </div>
+  </nav>
       <div class="container py-4">
           {% block body %}
       
